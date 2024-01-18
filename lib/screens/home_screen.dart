@@ -86,14 +86,15 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+
               ],
 
             ),
           ),
           const Gap(15),
-           SingleChildScrollView(
+           const SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.only(right: 20),
+            padding: EdgeInsets.only(right: 20),
             child: Row(
               children: [
                 TicketView(),
@@ -101,6 +102,31 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
+
+          const Gap(15),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Hotels',
+                        style: Styles.headLineStyle3,
+                        ),
+                      InkWell(
+                        onTap: () {
+                          print('your tapped');
+                        },
+                        child: Text(
+                          'View all',
+                          style: Styles.textStyle.copyWith(color: Styles.primaryColor),
+                          ),
+                      ),
+                    ],
+                  ),
+          ),
+          const Gap(15),
+          HomeScreen(),
         ],
 
       ),
